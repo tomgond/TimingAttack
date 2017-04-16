@@ -53,11 +53,11 @@ public class URLTimer {
     }
 
     public int findLength(){
-        long min = 99999;
+        long min = 0;
         int length = 99999;
         for (int i = 0; i<32; i++){
             long med = getMedianOfPassword(StringUtils.repeat("a", i), 10);
-            if (med < min){
+            if (med > min){
                 min = med;
                 length = i;
             }
